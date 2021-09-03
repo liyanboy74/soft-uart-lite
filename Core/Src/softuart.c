@@ -245,7 +245,7 @@ void SoftUartRxHelper(uint8_t ID)
 {
 	if(!SUart[ID].RxTimingFlag && SUart[ID].RxEnable)
 	{
-		htim3.Instance->CNT=52;	//Half OF Timer Period
+		htim3.Instance->CNT=52;	//Half Of Timer Period
 		SUart[ID].RxTimingFlag=1;
 		__HAL_TIM_CLEAR_IT(&htim3,TIM_IT_UPDATE);
 	}
