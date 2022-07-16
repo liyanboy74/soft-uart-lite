@@ -136,7 +136,7 @@ int main(void)
 		
 		ch=getchar(1);
 		SoftUartPuts(1,&ch,1);
-		SoftUartWaitUntilTxComplate(0);
+		SoftUartWaitUntilTxComplate(1);
 		HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
 		
     /* USER CODE END WHILE */
